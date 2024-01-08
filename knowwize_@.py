@@ -15,7 +15,7 @@ import os
 import tempfile
 
 # Set the OpenAI API key to an empty string (You should replace this with your actual API key)
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 import streamlit as st
 import base64
 def main():
