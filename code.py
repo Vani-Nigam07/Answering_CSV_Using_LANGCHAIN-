@@ -24,7 +24,7 @@ import time
 
 import streamlit as st
 
-os.environ["OPENAI_API_KEY"] = st.secrets["key"]
+os.environ["OPENAI_API_KEY"] = st.secrets["KEY"]
 def main():
     
     st.set_page_config(page_title="Knowwize Coding Assessment", page_icon="🦜")
