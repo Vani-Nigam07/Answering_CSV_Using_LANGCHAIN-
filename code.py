@@ -24,12 +24,13 @@ import time
 
 import streamlit as st
 
-os.environ["OPENAI_API_KEY"] = st.secrets["KEY"]
+
 def main():
     
     st.set_page_config(page_title="Knowwize Coding Assessment", page_icon="🦜")
     st.header("Knowwize Coding Assessment")
     st.write("This CSV includes Placement related statistics of an institute👋")
+    os.environ["OPENAI_API_KEY"] = st.secrets["KEY"]
     
     with st.chat_message("user"): 
         st.write("Upload your CSV here")
