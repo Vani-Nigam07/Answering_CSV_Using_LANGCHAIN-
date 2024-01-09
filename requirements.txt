@@ -2,9 +2,5 @@ streamlit
 python-dotenv
 langchain
 openai
-<<<<<<< HEAD
-langchain_experimental
-=======
-langchain_experimental
 
->>>>>>> 35bea2c4f0764a51771318003c0e2a3f9eb04661
+langchain_experimental
