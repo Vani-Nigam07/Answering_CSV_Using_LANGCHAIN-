@@ -21,9 +21,10 @@ import tempfile
 import time
 
 # Set the OpenAI API key to an empty string 
-os.environ["OPENAI_API_KEY"] = " "
+
 import streamlit as st
 import base64
+os.environ["OPENAI_API_KEY"] = st.secrets["key"]
 def main():
     
     st.set_page_config(page_title="Knowwize Coding Assessment", page_icon="🦜")
