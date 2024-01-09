@@ -17,12 +17,13 @@ from langchain_experimental.agents.agent_toolkits.csv.base import create_csv_age
 from langchain.llms import OpenAI
 from streamlit_chat import message
 import os
-
+import tempfile
+import time
 
 # Set the OpenAI API key to an empty string 
 
 import streamlit as st
-
+import base64
 os.environ["OPENAI_API_KEY"] = st.secrets["key"]
 def main():
     
