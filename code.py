@@ -20,13 +20,13 @@ import base64
 def main():
 
     st.set_page_config(page_title="Knowwize Coding Assessment", page_icon="🦜")
-    print(st.secrets)
+    prin = st.secrets.keys()
     os.environ["OPENAI_API_KEY"] = st.secrets["general"]["KEY"]
     st.header("Knowwize Coding Assessment")
     st.write("This CSV includes Placement related statistics of an institute👋")
 
     with st.chat_message("user"): 
-        st.write("Upload your CSV here")
+        st.write("Upload your CSV here" + " ".join(prin))
     file = st.file_uploader("", type="csv")  
 
     if file is not None:
