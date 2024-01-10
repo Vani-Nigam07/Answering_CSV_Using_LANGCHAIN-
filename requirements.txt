@@ -4,3 +4,5 @@ langchain
 openai
 streamlit-chat 
 langchain_experimental
+langchain-community
+tabulate
