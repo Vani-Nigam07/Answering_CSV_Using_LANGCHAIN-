@@ -20,21 +20,13 @@ import base64
 def main():
 
     st.set_page_config(page_title="Knowwize Coding Assessment", page_icon="🦜")
-    #image= Image.open("D:\knowwize\parrot.jpeg")
-    #st.image("D:\knowwize\parrot.jpeg")
+    print(st.secrets)
     os.environ["OPENAI_API_KEY"] = st.secrets["KEY"]
-
-
-
-
     st.header("Knowwize Coding Assessment")
     st.write("This CSV includes Placement related statistics of an institute👋")
 
     with st.chat_message("user"): 
         st.write("Upload your CSV here")
-
-        # align's the message to the right
-        ##message("this is a csv", is_user=True)
     file = st.file_uploader("", type="csv")  
 
     if file is not None:
@@ -43,8 +35,6 @@ def main():
             data_str = file.getvalue().decode('utf-8')
             f.write(data_str)
             f.flush()
-
-
             llm = OpenAI(temperature=0)
             with st.chat_message("human"):
                 user_input = st.text_input(" What is your question?")
@@ -52,8 +42,6 @@ def main():
                 if st.button("Click for the answer", type="primary"): 
                     agent = create_csv_agent(llm, f.name, verbose=True)
                     if user_input:
-
-
                         response = agent.run(user_input)
                         st.write(response)
                         print("Vani")
