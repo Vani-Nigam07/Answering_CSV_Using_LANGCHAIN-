@@ -21,7 +21,7 @@ def main():
 
     st.set_page_config(page_title="Knowwize Coding Assessment", page_icon="🦜")
     print(st.secrets)
-    os.environ["OPENAI_API_KEY"] = st.secrets["KEY"]
+    os.environ["OPENAI_API_KEY"] = st.secrets["general"]["KEY"]
     st.header("Knowwize Coding Assessment")
     st.write("This CSV includes Placement related statistics of an institute👋")
 
